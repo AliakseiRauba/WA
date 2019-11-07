@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+}
+
+.item {
+    position: fixed;
+    height: 400px;
+    width: 400px;
+    border: solid 2px black;
+}
+
+.item1 {
+    background-color: rgb(255, 0, 0);
+    height: 200px;
+    width: 200px;
+}
+
+.item2 {
+    z-index: 1;
+    position: absolute;
+    background-color: rgb(0, 255, 0);
+    height: 200px;
+    width: 200px;
+    top: 100px;
+    left: 100px;
+}
+
+.item3 {
+    position: absolute;
+    background-color: rgb(0, 0, 255);
+    height: 200px;
+    width: 200px;
+    bottom: 0;
+    right: 0;
+}
