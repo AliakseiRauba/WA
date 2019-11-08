@@ -1,26 +1,25 @@
-.container {
-    width: 1920px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
 img {
-    width: 20%;
-    margin: 10px;
+    width: 98%;
+    height: 98%;
     border-bottom: solid 3px rgb(129, 129, 129);
     border-right: solid 3px rgb(129, 129, 129);
     border-radius: 5px;
 }
 
-@media only screen and (max-width: 1080px) {
-    .container {
-        width: 100%;
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img {
+    flex: 1 20%;
+}
+
+@media (max-width: 1280px) {
+    .img {
+        flex: 1 25%;
     }
-    img {
-        width: 20%;
-    }
-    img:nth-last-child(-n+2) {
-        width: 45%;
+    .img:nth-last-child(-n+2) {
+        flex: 1 50%;
     }
 }
