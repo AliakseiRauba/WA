@@ -1,14 +1,16 @@
 .container {
     width: 1920px;
-    text-align: center;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 img {
     width: 20%;
     margin: 10px;
-    border: solid 2px black;
+    border-bottom: solid 3px rgb(129, 129, 129);
+    border-right: solid 3px rgb(129, 129, 129);
+    border-radius: 5px;
 }
 
 @media only screen and (max-width: 1080px) {
@@ -20,6 +22,5 @@ img {
     }
     img:nth-last-child(-n+2) {
         width: 45%;
-        box-sizing: border-box;
     }
 }
