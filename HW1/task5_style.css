@@ -1,0 +1,25 @@
+.container {
+    width: 1920px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img {
+    width: 20%;
+    margin: 10px;
+    border: solid 2px black;
+}
+
+@media only screen and (max-width: 1080px) {
+    .container {
+        width: 100%;
+    }
+    img {
+        width: 20%;
+    }
+    img:nth-last-child(-n+2) {
+        width: 45%;
+        box-sizing: border-box;
+    }
+}
