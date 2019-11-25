@@ -1,6 +1,7 @@
 var name;
 var reversName;
 var person;
+document.getElementsByTagName("body")[0].addEventListener('load', popUp());
 
 function popUp() {
     person = prompt("Please enter your name", "Aliaksei");
@@ -24,12 +25,12 @@ function popUp() {
     document.getElementById("reverssername").innerHTML = person;
 }
 
-function goToGoogle() {
-    window.location = "http://google.com/";
-}
 
-function dropContent() {
+document.getElementById("buttonGoogle").addEventListener('click', function() {
+    window.location = "http://google.com/";
+})
+
+document.getElementById("buttonDrop").addEventListener('click', function() {
     document.getElementById("username").innerHTML = "";
     document.getElementById("reverssername").innerHTML = "";
-
-}
+})
