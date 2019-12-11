@@ -29,8 +29,8 @@ function onRead() {
         if (this.readyState === 4) {
             result = JSON.parse(this.response);
             var resultTBody = document.createElement('tbody');
-            result.map(function(nthCPU) {
-                resultTBody.appendChild(parseCPUToTableRow(nthCPU));
+            result.map(function(Acc) {
+                resultTBody.appendChild(parseAccountsToTableRow(Acc));
             });
             var table = document.getElementById('tablebody').parentElement;
             table.replaceChild(resultTBody, document.getElementById('tablebody'));
@@ -85,35 +85,35 @@ function onDelete(ev) {
 }
 
 
-function parseCPUToTableRow(CPUs) {
+function parseAccountsToTableRow(Accounts) {
     var row = document.createElement('tr');
 
     id = document.createElement('th');
-    id.innerText = CPUs['id'];
+    id.innerText = Accounts['id'];
     row.appendChild(id);
 
     number = document.createElement('td');
-    number.innerText = CPUs['number'];
+    number.innerText = Accounts['number'];
     row.appendChild(number);
 
     typeofcontribution = document.createElement('td');
-    typeofcontribution.innerText = CPUs['typeofcontribution'];
+    typeofcontribution.innerText = Accounts['typeofcontribution'];
     row.appendChild(typeofcontribution);
 
     pin = document.createElement('td');
-    pin.innerText = CPUs['pin'];
+    pin.innerText = Accounts['pin'];
     row.appendChild(pin);
 
     balance = document.createElement('td');
-    balance.innerText = CPUs['balance'];
+    balance.innerText = Accounts['balance'];
     row.appendChild(balance);
 
     dateofcreation = document.createElement('td');
-    dateofcreation.innerText = CPUs['dateofcreation'];
+    dateofcreation.innerText = Accounts['dateofcreation'];
     row.appendChild(dateofcreation);
 
     user = document.createElement('td');
-    user.innerText = CPUs['user'];
+    user.innerText = Accounts['user'];
     row.appendChild(user);
 
     console.log("TableBody is created.");
