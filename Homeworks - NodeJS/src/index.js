@@ -1,16 +1,16 @@
 import express from 'express';
 import User from './User';
 import Worker from './Worker';
+import Datastore from 'nedb-promises';
+
 const app = express();
-const PORT = 8080;
+const port = 3000;
 
 let users = [];
 let workers = [];
-
-
 let ucount = 0;
 let wcount = 0;
-
+let datastore = Datastore.create('data/db.db');
 
 let User1 = new User(1234, "User 1")
 console.log(`user ${User1.getInfoAboutUser()} are created:  ` + (ucount += 1));
@@ -26,10 +26,11 @@ console.log(`worker ${Worker2.getInfoAboutWork()} are created: ` + (wcount += 1)
 
 users.push(User1);
 users.push(User2);
-
 workers.push(Worker1);
 workers.push(Worker2);
 
+datastore.insert(users);
+datastore.insert(workers);
 
 app.get('/info', (req, res) => {
     res.send(`
@@ -48,6 +49,6 @@ app.get('/info', (req, res) => {
     `);
 });
 
-app.listen(PORT, () => {
-    console.log(`Server running at: http://localhost:${PORT}/`);
+app.listen(port, () => {
+    console.log(`Server running at: http://localhost:${port}/`);
 });

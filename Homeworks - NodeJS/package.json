@@ -1,5 +1,5 @@
 {
-    "name": "hw11-node-js",
+    "name": "nodejs_homeworks",
     "version": "0.1.0",
     "main": "index.js",
     "devDependencies": {
@@ -30,6 +30,7 @@
         "express": "^4.17.1",
         "milsymbol": "^2.0.0",
         "moment": "^2.24.0",
+        "nedb-promises": "^4.0.1",
         "uglify-js": "^3.7.3"
     }
 }
