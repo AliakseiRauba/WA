@@ -60,7 +60,7 @@ class MoreInfo extends Account {
     get Type() {
         return this._type;
     };
-    set Type(new_type) {
+    set Type(type) {
         this._type = type;
     };
     get Username() {

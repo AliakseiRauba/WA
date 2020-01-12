@@ -1,0 +1,35 @@
+{
+    "name": "hw11-node-js",
+    "version": "0.1.0",
+    "main": "index.js",
+    "devDependencies": {
+        "@babel/core": "^7.8.0",
+        "@babel/preset-env": "^7.8.0",
+        "@babel/register": "^7.8.0",
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.3",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-es2015": "^6.24.1",
+        "grunt": "^0.4.5",
+        "grunt-babel": "^7.0.0",
+        "grunt-contrib-cssmin": "latest",
+        "grunt-contrib-jshint": "latest",
+        "grunt-contrib-less": "latest",
+        "grunt-contrib-uglify": "^4.0.1",
+        "grunt-contrib-watch": "latest",
+        "http-server": "^0.12.0",
+        "jshint-stylish": "latest",
+        "nodemon": "^2.0.2"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node -r esm src/index.js"
+    },
+    "dependencies": {
+        "esm": "^3.2.25",
+        "express": "^4.17.1",
+        "milsymbol": "^2.0.0",
+        "moment": "^2.24.0",
+        "uglify-js": "^3.7.3"
+    }
+}
