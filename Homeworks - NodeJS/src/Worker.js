@@ -1,9 +1,16 @@
 "user strict";
 export default class Worker {
-    constructor(name, surname, age) {
+    constructor(id, name, surname, age) {
+        this.id = id;
         this.name = name;
         this.surname = surname;
         this.age = age;
+    };
+    get id() {
+        return this._id;
+    };
+    set id(id) {
+        this._id = id;
     };
     get name() {
         return this._name;
@@ -26,6 +33,7 @@ export default class Worker {
 
     getInfoAboutWork() {
         return (
+            "ID: " + this.id + "\n" +
             "Name: " + this.name + "\n" +
             "Surname: " + this.surname + "\n" +
             "Age: " + this.age + "\n" +
@@ -35,6 +43,7 @@ export default class Worker {
 
     getInfoAboutWorkToHtml() {
         return (
+            "<br>ID: " + this.id + "</br>" +
             "<br>Name: " + this.name + "</br>" +
             "<br>Surname: " + this.surname + "</br>" +
             "<br>Age: " + this.age + "</br>" +
